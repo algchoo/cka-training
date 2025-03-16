@@ -41,3 +41,5 @@ terraform.rc
 # Ignore build artifacts
 *.zip
 *.tar.gz
+
+labs/
