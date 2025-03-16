@@ -1,0 +1,8 @@
+# update version in kubeadm-config
+sudo sed -e 's/kubernetesVersion: 1.28.1/kubernetesVersion: 1.29.1/g' -i /LFS258/SOLUTIONS/s_03/kubeadm-config.yaml
+
+# initialize and save output
+sudo kubeadm init --config=/LFS258/SOLUTIONS/s_03/kubeadm-config.yaml --upload-certs | tee kubeadm-init.out
+
+# add cilium from lab resources
+kubectl apply -f /LFS258/SOLUTIONS/s_03/cilium-cni.yaml
